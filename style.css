@@ -14,7 +14,7 @@
 :root {
     --bg-color: #f0ecec;
     --text-color: #333;
-    --main-color: #3d4e4b;
+    --main-color: #045b4b;
     --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .2);
 }
@@ -25,7 +25,7 @@
 }
 
 .dark-mode {
-    --bg-color: #675757;
+    --bg-color: #161b1f;
     --text-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .7);
 }
@@ -257,12 +257,14 @@ section {
 
 .profession i {
     font-size: 3.8rem;
+    
 }
 
 .profession h3 {
     font-size: 3.2rem;
     line-height: 1;
     font-weight: 600;
+
 }
 
  .circle {
@@ -290,8 +292,11 @@ section {
     bottom: 0;
     right: 60px;
     pointer-events: none;
-    max-width: 900px;
-    max-height: 150vh;
+    max-width: 500px;
+    border-radius: 50%;
+    border: 2px solid var(--white-color) transparent;
+    
+    
 }
 
 span {
@@ -381,18 +386,18 @@ span {
     margin: 1rem 0 3rem;
 }
 
-.portfolio {
+.project {
     min-height: auto;
     padding-bottom: 10rem;
 }
 
-.portfolio h2 {
+.project h2 {
     margin-bottom: 4rem;
 }
-.portfolio p{
+.project p{
     color: #19201f;
 }
-.portfolio .portfolio-container {
+.project .project-container {
     display: flex;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -401,28 +406,28 @@ span {
 
 }
 
-.portfolio-box {
+.project-box {
     position: relative;
     display: flex;
     border-radius: 2rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
     overflow: hidden;
-    height: 60vh;
-    width: 50rem;
+    height: fit-content;
+    width: 80rem;
     justify-content: center;  
       
 }
 
-.portfolio-box img {
-    width: 100%;
+.project-box img {
+    width: 120%;
     transition: .5s ease;
 }
 
-.portfolio-box:hover img {
+.project-box:hover img {
     transform: scale(1.1);
 }
 
-.portfolio-layer {
+.project-layer {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -440,18 +445,18 @@ span {
     transition: .5s ease;
 }
 
-.portfolio-box:hover .portfolio-layer {
+.project-box:hover .project-layer {
     opacity: 1;
 }
 
-.portfolio-layer h4 {
+.project-layer h4 {
     font-size: 3rem;
 }
-.portfolio-layer p {
+.project-layer p {
     font-size: 1.6rem;
     margin: .3rem 0 1rem;
 }
-.portfolio-layer a {
+.project-layer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -461,7 +466,7 @@ span {
     border-radius: 50%;
 }
 
-.portfolio-layer a i {
+.project-layer a i {
     font-size: 2rem;
     color: #333;
 }
@@ -520,6 +525,7 @@ span {
     flex-wrap: wrap;
     padding: 2rem 7%;
     background: var(--main-color);
+    height: 20vh;
 }
 
 .footer-text p {
@@ -547,7 +553,10 @@ span {
     font-size: 2.4rem;
     color: #333;
 }
-
+.footercontact {
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
 
 /* BREAKPOINTS */
 @media (max-width: 1200px) {
@@ -628,6 +637,7 @@ span {
     .footer {
         padding: 2rem 3%;
     }
+
 }
 
 @media (max-width: 896px) {
@@ -851,6 +861,7 @@ span {
         text-align: center;
         margin-top: 2rem;
     }
+    
 }
 
 @media (max-width: 365px) {
