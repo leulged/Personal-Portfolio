@@ -1,0 +1,149 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 7%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  transition: 0.5s;
+}
+
+.sticky {
+  background: var(--bg-color);
+  box-shadow: 0 0.1rem 1rem var(--shadow-color);
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 0.2rem;
+  background: var(--main-color);
+  transition: 0.3s;
+}
+
+.navbar a:hover::before,
+.navbar a.active::before {
+  width: 100%;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.dark-mode-icon,
+.menu-icon {
+  font-size: 2.4rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.dark-mode-icon:hover,
+.menu-icon:hover {
+  color: var(--main-color);
+  background: rgba(59, 130, 246, 0.1);
+  transform: scale(1.1);
+}
+
+.dark-mode-icon:focus-visible,
+.menu-icon:focus-visible {
+  outline: 2px solid var(--main-color);
+  outline-offset: 2px;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 2rem 3%;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color);
+    box-shadow: 0 0.1rem 1rem var(--shadow-color);
+    flex-direction: column;
+    padding: 2rem 0;
+    gap: 2rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+
+  .navbar.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1.5rem 3%;
+  }
+
+  .logo {
+    font-size: 2.2rem;
+  }
+
+  .dark-mode-icon,
+  .menu-icon {
+    font-size: 2rem;
+  }
+}

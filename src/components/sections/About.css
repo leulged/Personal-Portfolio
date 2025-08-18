@@ -1,0 +1,285 @@
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  min-height: 100vh;
+  padding: 10rem 9% 6rem;
+  position: relative;
+}
+
+.about-img {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: 0;
+  height: 100%;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3),
+    0 0 0 1px rgba(59, 130, 246, 0.1);
+  transition: all 0.3s ease;
+  background: transparent;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.about-img img:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(139, 92, 246, 0.4),
+    0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+.about-content {
+  flex: 1;
+  max-width: 60rem;
+  padding-top: 1rem;
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+  color: var(--secondary-color);
+}
+
+.info-item svg {
+  color: var(--main-color);
+  font-size: 2rem;
+}
+
+.about-content h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+  line-height: 1.4;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.about-content h3:first-of-type {
+  margin-top: 0;
+}
+
+.about-content p {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.about-content span {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+/* Achievements Section */
+.achievements {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 400px;
+  justify-self: flex-start;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--bg-color);
+  border-radius: 1rem;
+  box-shadow: 0 0.1rem 0.5rem var(--shadow-color);
+  border: 0.1rem solid var(--main-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(59, 130, 246, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.achievement-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0.5rem 2rem rgba(59, 130, 246, 0.3);
+  border-color: var(--main-color-alt);
+  background: linear-gradient(
+    135deg,
+    var(--bg-color) 0%,
+    rgba(59, 130, 246, 0.05) 100%
+  );
+}
+
+.achievement-item:hover::before {
+  left: 100%;
+}
+
+.achievement-item:hover .achievement-icon {
+  background: linear-gradient(
+    135deg,
+    var(--main-color) 0%,
+    var(--main-color-alt) 100%
+  );
+  transform: scale(1.1);
+}
+
+.achievement-item:hover .achievement-text h4 {
+  color: var(--main-color-alt);
+}
+
+.achievement-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--main-color);
+  border-radius: 50%;
+  color: var(--white-color);
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.achievement-text h4 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--main-color);
+  margin-bottom: 0.5rem;
+}
+
+.achievement-text p {
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .about .profession-container .profession-box {
+    right: -10%;
+  }
+
+  .about .profession-container .overlay {
+    right: -6%;
+  }
+
+  .about-img img {
+    right: 0;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .about .profession-container .profession-box {
+    right: -15%;
+  }
+
+  .about-img img {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about {
+    gap: 3rem;
+  }
+
+  .about-img img {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .about-content {
+    max-width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .about-content h2 {
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 35rem;
+  }
+
+  .achievements {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .achievement-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-img img {
+    width: 30rem;
+  }
+
+  .achievements {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-item {
+    padding: 1.5rem;
+  }
+
+  .achievement-text h4 {
+    font-size: 2rem;
+  }
+
+  .achievement-text p {
+    font-size: 1.2rem;
+  }
+}
