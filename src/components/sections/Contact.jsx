@@ -4,10 +4,6 @@ import {
   FaEnvelope,
   FaPhone,
   FaMapMarkerAlt,
-  FaLinkedin,
-  FaGithub,
-  FaTwitter,
-  FaInstagram,
   FaPaperPlane,
 } from "react-icons/fa";
 import "./Contact.css";
