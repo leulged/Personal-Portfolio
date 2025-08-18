@@ -6,7 +6,6 @@ import {
   FaCode,
   FaDatabase,
   FaBrain,
-  FaMobile,
 } from "react-icons/fa";
 import "./Projects.css";
 
@@ -41,7 +40,7 @@ const Projects = () => {
         "JWT",
         "Cron Jobs",
       ],
-      github: "https://github.com/leulged/payment-app-stripe",
+      github: "https://github.com/leulged/paymentApp",
       live: null,
       deployed: false,
       deploymentNote: "Backend deployed on Railway, frontend in development",
@@ -138,7 +137,8 @@ const Projects = () => {
         "Streamlit",
         "Data Analysis",
       ],
-      github: "https://github.com/leulged/solar-radiation-dashboard",
+      github:
+        "https://github.com/leulged/Solar-Insights-Dashboard-Data-Analysis-and-Visualization-for-Renewable-Energy",
       live: null,
       deployed: false,
       deploymentNote: "Streamlit app, can be deployed on Streamlit Cloud",
@@ -199,7 +199,7 @@ const Projects = () => {
         "Stored Procedures",
         "User Management",
       ],
-      github: "https://github.com/leulged/stadium-ticket-system",
+      github: "https://github.com/bereket-kume/Stadium_Ticket_Systems",
       live: null,
       deployed: false,
       deploymentNote: "Database system with stored procedures",
