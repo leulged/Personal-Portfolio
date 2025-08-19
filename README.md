@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Personal Portfolio - Leul Gedion
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the personal portfolio of **Leul Gedion**, a 5th-year Software Engineering student, Full Stack Developer, and Data Scientist. The portfolio showcases my skills, experience, certifications, competitive programming achievements, and projects.
 
-## Available Scripts
+## 🌐 Live Demo
+Check out the live portfolio here: [https://leulgedion.netlify.app/](https://leulgedion.netlify.app/)
 
-In the project directory, you can run:
+## Sections
 
-### `npm start`
+### Home
+- Introduction and a brief overview of who I am.
+- Highlights my role as a problem solver and software engineer.
+- Quick links to download CV and get in touch.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### About
+- Background: 5th-year Software Engineering student at Adama Science and Technology University.
+- Expertise in full-stack development, AI/ML integration, and data science.
+- Passionate about turning complex ideas into scalable applications.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Skills
+- **Frontend Development:** JavaScript, React.js, Next.js, React Native, HTML5/CSS3, TypeScript, Tailwind CSS.
+- **Backend Development:** Node.js, Go, Python, Express.js, RESTful APIs.
+- **Databases:** MongoDB, PostgreSQL, MySQL, Mongoose.
+- **Competitive Programming:** 400+ LeetCode problems, 200+ Codeforces problems.
 
-### `npm test`
+### Experience
+- **Software Engineer, Prospex AI Inc (2025-Present)**  
+  Contributed to AI-powered projects, full-stack development, and scalable software solutions.
+- **Software Developer, IE Network Solution (2023-2024)**  
+  Developed web applications including vacancy and user management systems.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Education
+- **Software Engineering, Adama Science and Technology University (2021-Present)**
+- **Competitive Programming, A2SV (2024-Present)**
 
-### `npm run build`
+### Certifications
+- ALX AI Career Essentials  
+- Data Scientist Career Track, 365 Data Science  
+- Additional certifications in AI, Data Science, Problem Solving, and Entrepreneurship.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Projects
+- **Payment App with Stripe Connect (Full Stack):** User authentication, Stripe integration, payment processing.  
+- **Blog API - Go RESTful API (Backend):** Email verification, AI-powered content generation, blog CRUD, JWT authentication.  
+- **Vacancy and Employment Management System (Full Stack):** Job posting management, applicant tracking system, role-based access control.  
+- Additional projects in full-stack, backend, and data science.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Contact
+- **Email:** leulgedion224@gmail.com  
+- **Phone:** +251 912 345 678  
+- **Location:** Adama, Ethiopia  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
+- Modern **React-based portfolio** with interactive UI.
+- Showcases professional experience, skills, certifications, and projects.
+- Includes contact form for project inquiries and collaborations.
+- Fully deployed and accessible online.
 
-### `npm run eject`
+## Author
+**Leul Gedion** – Full Stack Developer | AI/ML Developer | Data Scientist  
+Passionate about creating innovative solutions and exploring new technologies.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This repository is for personal portfolio purposes and professional showcase.
