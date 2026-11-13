@@ -1,33 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaInstagram, FaDownload, FaTelegram } from "react-icons/fa";
 import "./Hero.css";
 import ppImage from "../../assets/images/profile/pp.png";
-import cvFile from "../../assets/documents/resume/Blue Simple Professional CV Resume.pdf";
 
 const Hero = () => {
-  const [professionIndex, setProfessionIndex] = useState(0);
-
-  useEffect(() => {
-    const professions = [
-      "Data Scientist",
-      "Full Stack Developer",
-      "Problem Solver",
-    ];
-
-    const interval = setInterval(() => {
-      setProfessionIndex((prevIndex) => (prevIndex + 1) % professions.length);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const professions = [
-    "Data Scientist",
-    "Full Stack Developer",
-    "Problem Solver",
-  ];
-
   return (
     <section className="hero" id="home">
       <motion.div
@@ -39,19 +16,18 @@ const Hero = () => {
         <h1>
           Hi, I'm <span>Leul Gedion</span>
         </h1>
-        <div className="profession">{professions[professionIndex]}</div>
+        <div className="profession">Software Engineer | AI Evaluation & Backend</div>
         <p>
-          Welcome! I'm a 5th-year Software Engineering student at Adama Science
-          and Technology University, passionate about crafting innovative
-          digital solutions. With expertise in full-stack development, AI/ML
-          integration, and data science, I specialize in transforming complex
-          ideas into elegant, scalable applications. Let's build the future
-          together.
+          I'm a software engineer based in Adama, Ethiopia. I build backend and
+          full-stack systems with Node.js, Go, React and React Native, and I
+          evaluate and benchmark AI coding agents. I graduated with a BSc in
+          Software Engineering from Adama Science and Technology University and
+          work remotely with teams building healthcare and AI products.
         </p>
 
         <div className="hero-buttons">
           <a
-            href={cvFile}
+            href="/Leul_Gedion_CV.pdf"
             download="Leul_Gedion_CV.pdf"
             className="hero-btn"
             aria-label="Download CV - Leul Gedion's Resume"
@@ -113,7 +89,7 @@ const Hero = () => {
       >
         <img
           src={ppImage}
-          alt="Leul Gedion - Full Stack Developer and Data Scientist"
+          alt="Leul Gedion - Software Engineer"
           loading="eager"
         />
       </motion.div>

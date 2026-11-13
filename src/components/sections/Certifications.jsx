@@ -11,6 +11,26 @@ import "./Certifications.css";
 const Certifications = () => {
   const certifications = [
     {
+      title: "A2SV First Year Education Program",
+      issuer: "Africa to Silicon Valley",
+      date: "2025",
+      description:
+        "Certificate of completion for A2SV’s 2025 First Year Education Program in data structures, algorithms, and problem solving. Signed by Emre Varol, Founder and CEO.",
+      category: "Problem Solving",
+      link: "/certificates/a2sv-completion-certificate.pdf",
+      downloadLink: "/certificates/a2sv-completion-certificate.pdf",
+    },
+    {
+      title: "Web Development Internship",
+      issuer: "IE Network Solutions",
+      date: "17 August 2024",
+      description:
+        "Certificate for a 90-day web development internship, 10 May to 10 August 2024. Signed by Selamawit Girma, Head of Development.",
+      category: "Internship",
+      link: "/certificates/ie-network-internship.pdf",
+      downloadLink: "/certificates/ie-network-internship.pdf",
+    },
+    {
       title: "ALX Recommendation Letter",
       issuer: "ALX AI Career Essentials",
       date: "2024",
@@ -65,15 +85,27 @@ const Certifications = () => {
       downloadLink:
         "https://drive.google.com/uc?export=download&id=1_BaZc18Vf0l-_B84huyVL5kqbK8t-Jy0",
     },
+    {
+      title: "HIPAA Certificate",
+      // TODO: issuer and year
+      issuer: "Issuer unconfirmed",
+      date: "Year unconfirmed",
+      description: "Healthcare and compliance certificate.",
+      category: "Healthcare / Compliance",
+    },
+    {
+      title: "4th Place, CSEC ASTU Data Science Hackathon",
+      // TODO: year
+      issuer: "CSEC ASTU",
+      date: "Year unconfirmed",
+      description: "Fourth place in the CSEC ASTU Data Science Hackathon.",
+      category: "Achievements",
+    },
   ];
 
   const categories = [
     "All",
-    "Recommendations",
-    "Data Science",
-    "AI",
-    "Problem Solving",
-    "Entrepreneurship",
+    ...new Set(certifications.map((cert) => cert.category)),
   ];
 
   const [selectedCategory, setSelectedCategory] = React.useState("All");
@@ -157,16 +189,18 @@ const Certifications = () => {
                 </div>
               </div>
               <div className="certification-actions">
-                <a
-                  href={cert.link}
-                  className="certification-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="View Certificate"
-                >
-                  <FaExternalLinkAlt />
-                </a>
-                {cert.downloadLink !== "#" ? (
+                {cert.link ? (
+                  <a
+                    href={cert.link}
+                    className="certification-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="View Certificate"
+                  >
+                    <FaExternalLinkAlt />
+                  </a>
+                ) : null}
+                {cert.downloadLink ? (
                   <a
                     href={cert.downloadLink}
                     className="certification-download"
@@ -177,14 +211,7 @@ const Certifications = () => {
                   >
                     <FaDownload />
                   </a>
-                ) : (
-                  <span
-                    className="certification-download disabled"
-                    title="Download not available"
-                  >
-                    <FaDownload />
-                  </span>
-                )}
+                ) : null}
               </div>
             </div>
 
@@ -220,16 +247,12 @@ const Certifications = () => {
         viewport={{ once: true }}
       >
         <div className="stat-item">
-          <h3>5+</h3>
-          <p>Professional Certifications</p>
+          <h3>{certifications.length}</h3>
+          <p>Certifications and achievements</p>
         </div>
         <div className="stat-item">
-          <h3>5+</h3>
-          <p>Technology Categories</p>
-        </div>
-        <div className="stat-item">
-          <h3>2023-2024</h3>
-          <p>Certification Period</p>
+          <h3>{categories.length - 1}</h3>
+          <p>Categories</p>
         </div>
       </motion.div>
     </section>

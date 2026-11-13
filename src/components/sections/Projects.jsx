@@ -2,15 +2,139 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   FaGithub,
-  FaExternalLinkAlt,
   FaCode,
   FaDatabase,
   FaBrain,
+  FaMobileAlt,
 } from "react-icons/fa";
 import "./Projects.css";
 
 const Projects = () => {
   const projects = [
+    {
+      title: "GoalConnect",
+      category: "Full Stack",
+      icon: <FaCode />,
+      description:
+        "Football scouting platform. The web app is a private Next.js project with authentication and email verification. The public API is Node.js, Express, and MongoDB with Socket.IO, and covers players, video uploads, and realtime messaging.",
+      shortDescription:
+        "Football scouting platform with a private Next.js web app and a public Express and MongoDB API.",
+      features: [
+        "Authentication and email verification on the web app",
+        "Player application management",
+        "Video uploads",
+        "Realtime messaging with Socket.IO",
+      ],
+      technologies: ["Next.js", "Express", "MongoDB", "Socket.IO"],
+      github: "https://github.com/Goal-Connect/Goalconnect-Backend-repo",
+    },
+    {
+      title: "Med-work",
+      category: "Full Stack",
+      icon: <FaCode />,
+      description:
+        "Pharmacy ordering and delivery web app. My work on it includes delivery tracking on the pharmacy orders page, a shared language switcher, and the admin sidebar.",
+      shortDescription:
+        "Pharmacy ordering and delivery web app, including order tracking and an admin sidebar.",
+      features: [
+        "Delivery tracking on the pharmacy orders page",
+        "Shared language switcher",
+        "Admin sidebar",
+      ],
+      technologies: ["TypeScript"],
+      // TODO: repo URL
+      github: null,
+    },
+    {
+      title: "ProspexCare",
+      category: "Full Stack",
+      icon: <FaCode />,
+      // TODO: what I personally built
+      description:
+        "Healthcare platform with React Native mobile and web apps and AI-assisted document extraction.",
+      shortDescription:
+        "Healthcare platform with React Native mobile and web apps and AI-assisted document extraction.",
+      features: [
+        "React Native mobile app",
+        "Web app",
+        "AI-assisted document extraction",
+      ],
+      technologies: ["React Native", "React", "Node.js", "Supabase", "Python"],
+      // TODO: repo URL
+      github: null,
+    },
+    {
+      title: "Competitive Programming Solutions",
+      category: "Competitive Programming",
+      icon: <FaCode />,
+      description:
+        "Python solutions for LeetCode and Codeforces. The public repository has 204 solutions, each in its own folder with the code and a short note. Topics include arrays, strings, linked lists, trees, graphs, and dynamic programming. More solutions are not pushed yet.",
+      shortDescription:
+        "Public Python solutions for LeetCode and Codeforces. 204 solutions are in the repository, and more are not pushed yet.",
+      features: [
+        "204 Python solutions in the public repository",
+        "One folder per problem, with the solution and a short note",
+        "Arrays, strings, linked lists, trees, graphs, and dynamic programming",
+      ],
+      technologies: ["Python"],
+      github: "https://github.com/leulged/a2SV_HUB",
+    },
+    {
+      title: "Football Club Management System",
+      category: "Full Stack",
+      icon: <FaCode />,
+      // TODO: features and stack
+      description:
+        "Football club management system delivered for Adama Football Club.",
+      shortDescription:
+        "Football club management system delivered for Adama Football Club.",
+      features: [],
+      technologies: [],
+      // TODO: repo URL
+      github: null,
+    },
+    {
+      title: "AI Benchmark Task Authoring",
+      category: "AI / Evaluation",
+      icon: <FaBrain />,
+      description:
+        "84+ accepted tasks for AI coding-agent benchmarks (SWE-bench-style, memory-safety bug/patch tasks in C).",
+      shortDescription:
+        "84+ accepted tasks for AI coding-agent benchmarks (SWE-bench-style, memory-safety bug/patch tasks in C).",
+      features: [
+        "SWE-bench-style coding tasks",
+        "Memory-safety bug and patch tasks in C",
+      ],
+      technologies: ["C", "Python", "Docker"],
+      // TODO: repo URL
+      github: null,
+    },
+    {
+      title: "Hmax",
+      category: "Mobile",
+      icon: <FaMobileAlt />,
+      // TODO: confirm I want this shown, and a short description
+      description: "Flutter and Supabase height-tracking app.",
+      shortDescription: "Flutter and Supabase height-tracking app.",
+      features: [],
+      technologies: ["Flutter", "Supabase"],
+      // TODO: repo URL
+      github: null,
+    },
+    {
+      title: "Bible Study App",
+      category: "Mobile",
+      icon: <FaMobileAlt />,
+      // TODO: confirm I want this shown
+      description:
+        "React Native app with reader, parallel view, reading plans and search.",
+      shortDescription:
+        "React Native app with reader, parallel view, reading plans and search.",
+      features: ["Reader", "Parallel view", "Reading plans", "Search"],
+      technologies: ["React Native"],
+      // TODO: repo URL
+      github: null,
+    },
     {
       title: "Payment App with Stripe Connect",
       category: "Full Stack",
@@ -41,9 +165,6 @@ const Projects = () => {
         "Cron Jobs",
       ],
       github: "https://github.com/leulged/paymentApp",
-      live: null,
-      deployed: false,
-      deploymentNote: "Backend deployed on Railway, frontend in development",
     },
     {
       title: "Blog API - Go RESTful API",
@@ -75,9 +196,6 @@ const Projects = () => {
         "Clean Architecture",
       ],
       github: "https://github.com/BemnetMussa/g6-Starter_project",
-      live: null,
-      deployed: false,
-      deploymentNote: "API ready for deployment, documentation available",
     },
     {
       title: "Vacancy and Employment Management System",
@@ -108,9 +226,6 @@ const Projects = () => {
       ],
       github:
         "https://github.com/leulged/Vacancy-and-Employee-Management-System",
-      live: null,
-      deployed: false,
-      deploymentNote: "Full-stack application, ready for deployment",
     },
     {
       title: "Solar Radiation Insights Dashboard",
@@ -139,9 +254,6 @@ const Projects = () => {
       ],
       github:
         "https://github.com/leulged/Solar-Insights-Dashboard-Data-Analysis-and-Visualization-for-Renewable-Energy",
-      live: null,
-      deployed: false,
-      deploymentNote: "Streamlit app, can be deployed on Streamlit Cloud",
     },
     {
       title: "Quantitative Analysis Using PyNance and Custom Indicators",
@@ -170,39 +282,6 @@ const Projects = () => {
         "Jupyter Notebook",
       ],
       github: "https://github.com/leulged/financial-news-analysis",
-      live: null,
-      deployed: false,
-      deploymentNote:
-        "Jupyter notebook analysis, ready for dashboard conversion",
-    },
-    {
-      title: "Stadium Ticket System",
-      category: "Backend",
-      icon: <FaDatabase />,
-      description:
-        "A comprehensive database system for managing ticket sales, reservations, and payments for football matches in various stadiums. The system includes user management for administrators, event managers, and fans. Features include user registration and login for fans, stadium and match management for event managers, ticket purchasing and reservation for fans, payment processing and transaction history, and access control for administrators and event managers. The database structure consists of tables for Fans, Stadiums, match_event, seat, ticket, reservation, and payment. The system includes a stored procedure called PurchaseTicket that performs the ticket purchase transaction, checking ticket availability, updating ticket status, deducting ticket price from fan's account balance, and recording payment details. User roles include Main Admin with full access to all database tables, and Event Manager with select, insert, update, and delete access to stadiums, match_event, seat, ticket, reservation tables, and select and insert access to the payment table.",
-      shortDescription:
-        "A comprehensive database system for managing ticket sales, reservations, and payments for football matches in various stadiums.",
-      features: [
-        "User registration and login",
-        "Stadium and match management",
-        "Ticket purchasing and reservation",
-        "Payment processing",
-        "Transaction history",
-        "Access control",
-        "Stored procedures",
-      ],
-      technologies: [
-        "SQL",
-        "MySQL",
-        "Database Design",
-        "Stored Procedures",
-        "User Management",
-      ],
-      github: "https://github.com/bereket-kume/Stadium_Ticket_Systems",
-      live: null,
-      deployed: false,
-      deploymentNote: "Database system with stored procedures",
     },
   ];
 
@@ -306,54 +385,27 @@ const Projects = () => {
                 {project.icon}
                 {project.category}
               </div>
-              <div className="project-overlay">
-                <div className="project-actions">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link"
-                    title="View Code on GitHub"
-                    aria-label={`View ${project.title} code on GitHub`}
-                  >
-                    <FaGithub />
-                  </a>
-                  {project.deployed ? (
+              {project.github ? (
+                <div className="project-overlay">
+                  <div className="project-actions">
                     <a
-                      href={project.live}
+                      href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="project-link"
-                      title="Live Demo"
-                      aria-label={`View ${project.title} live demo`}
+                      title="View Code on GitHub"
+                      aria-label={`View ${project.title} code on GitHub`}
                     >
-                      <FaExternalLinkAlt />
+                      <FaGithub />
                     </a>
-                  ) : (
-                    <button
-                      className="project-link disabled"
-                      title={project.deploymentNote}
-                      aria-label={`${project.title} - ${project.deploymentNote}`}
-                      disabled
-                    >
-                      <FaExternalLinkAlt />
-                    </button>
-                  )}
+                  </div>
                 </div>
-              </div>
+              ) : null}
             </div>
 
             <div className="project-content">
               <div className="project-header">
                 <h3>{project.title}</h3>
-                {!project.deployed && (
-                  <span
-                    className="deployment-status"
-                    title={project.deploymentNote}
-                  >
-                    In Development
-                  </span>
-                )}
               </div>
               <h4>{project.category}</h4>
               <p>
@@ -374,6 +426,7 @@ const Projects = () => {
                 )}
               </p>
 
+              {project.features.length > 0 && (
               <div className="project-features">
                 <h5>Key Features:</h5>
                 <ul>
@@ -406,7 +459,9 @@ const Projects = () => {
                   )}
                 </ul>
               </div>
+              )}
 
+              {project.technologies.length > 0 && (
               <div className="project-technologies">
                 <h5>Technologies Used:</h5>
                 <div className="tech-tags">
@@ -417,41 +472,22 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
+              )}
 
-              <div className="project-actions-bottom">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-btn github-btn"
-                  aria-label={`View ${project.title} code on GitHub`}
-                >
-                  <FaGithub />
-                  View Code
-                </a>
-                {project.deployed ? (
+              {project.github ? (
+                <div className="project-actions-bottom">
                   <a
-                    href={project.live}
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="project-btn live-btn"
-                    aria-label={`View ${project.title} live demo`}
+                    className="project-btn github-btn"
+                    aria-label={`View ${project.title} code on GitHub`}
                   >
-                    <FaExternalLinkAlt />
-                    Live Demo
+                    <FaGithub />
+                    View Code
                   </a>
-                ) : (
-                  <button
-                    className="project-btn disabled-btn"
-                    disabled
-                    title={project.deploymentNote}
-                    aria-label={`${project.title} - ${project.deploymentNote}`}
-                  >
-                    <FaExternalLinkAlt />
-                    Coming Soon
-                  </button>
-                )}
-              </div>
+                </div>
+              ) : null}
             </div>
           </motion.div>
         ))}

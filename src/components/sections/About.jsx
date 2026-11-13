@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import {
   FaCode,
   FaTrophy,
-  FaCertificate,
   FaMapMarkerAlt,
   FaGraduationCap,
 } from "react-icons/fa";
@@ -12,10 +11,10 @@ import ppImage from "../../assets/images/profile/Adobe Express - file.png";
 
 const About = () => {
   const achievements = [
-    { icon: <FaCode />, number: "400+", text: "LeetCode Problems" },
-    { icon: <FaCode />, number: "200+", text: "Codeforces Problems" },
-    { icon: <FaCertificate />, number: "15+", text: "Certifications" },
-    { icon: <FaTrophy />, number: "7+", text: "Major Projects" },
+    { icon: <FaCode />, number: "84+", text: "Accepted AI Benchmark Tasks" },
+    { icon: <FaTrophy />, number: "600+", text: "Problems Solved (LeetCode & Codeforces)" },
+    { icon: <FaGraduationCap />, number: "2026", text: "BSc Software Engineering" },
+    { icon: <FaMapMarkerAlt />, number: "Remote", text: "Working with global teams" },
   ];
 
   return (
@@ -29,7 +28,7 @@ const About = () => {
       >
         <img
           src={ppImage}
-          alt="Leul Gedion - Software Engineering Student"
+          alt="Leul Gedion - Software Engineer"
           loading="lazy"
         />
 
@@ -66,33 +65,34 @@ const About = () => {
         <div className="about-info">
           <div className="info-item">
             <FaGraduationCap />
-            <span>5th Year Software Engineering Student</span>
+            <span>
+              BSc Software Engineering, Adama Science and Technology University
+              (2026), CGPA 3.5
+            </span>
           </div>
           <div className="info-item">
             <FaMapMarkerAlt />
-            <span>Adama Science and Technology University</span>
+            <span>Adama, Ethiopia</span>
           </div>
         </div>
         <h3>Who I Am</h3>
         <p>
-          I'm a passionate software engineer with expertise in full-stack
-          development, AI/ML integration, and data science. Currently pursuing
-          my degree at Adama Science and Technology University, I bring a
-          multifaceted skill set to the table.
+          Software engineer with experience in full-stack development, backend
+          engineering and AI model evaluation. I graduated from Adama Science
+          and Technology University in 2026.
         </p>
         <h3>What I Do</h3>
         <p>
-          Specializing in full-stack development with expertise in the MERN
-          stack and Go, I seamlessly navigate through complex technical
-          challenges. Beyond conventional development, my proficiency extends to
-          computational programming, where I thrive in solving complex problems
-          with efficient algorithms and code.
+          I build production systems with the MERN stack and Go, ship features
+          on ProspexCare (a healthcare platform with React Native and web
+          apps), and author benchmark tasks that test how well AI agents solve
+          real coding problems. I have 84+ accepted tasks and have evaluated
+          AI-generated code and reasoning for several AI-data platforms.
         </p>
-        <h3>My Passion</h3>
+        <h3>My Interests</h3>
         <p>
-          My passion truly lies at the intersection of technology and data, as I
-          continuously explore innovative solutions that bridge the gap between
-          theoretical concepts and practical applications.
+          Backend systems, systems programming and security, and the
+          infrastructure used to evaluate AI.
         </p>
       </motion.div>
     </section>

@@ -5,6 +5,8 @@ import {
   FaPhone,
   FaMapMarkerAlt,
   FaPaperPlane,
+  FaGithub,
+  FaLinkedin,
 } from "react-icons/fa";
 import "./Contact.css";
 
@@ -39,9 +41,15 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission (replace with actual form handling)
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (!response.ok) {
+        throw new Error("send failed");
+      }
       setSubmitStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
@@ -62,8 +70,8 @@ const Contact = () => {
     {
       icon: <FaPhone />,
       title: "Phone",
-      value: "+251 912 345 678",
-      link: "tel:+251912345678",
+      value: "+251 97 956 4960",
+      link: "tel:+251979564960",
       description: "Call me",
     },
     {
@@ -87,8 +95,8 @@ const Contact = () => {
           Get In <span>Touch</span>
         </h2>
         <p className="contact-intro">
-          Let's discuss your next project or opportunity. I'm always open to new
-          challenges and collaborations.
+          I'm open to remote roles in AI evaluation, backend engineering and
+          full-stack development. Email me or connect on LinkedIn.
         </p>
       </motion.div>
 
@@ -101,11 +109,7 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <h3>Let's Connect</h3>
-          <p>
-            I'm passionate about creating innovative solutions and always
-            excited to work on new projects. Whether you have a question, want
-            to collaborate, or just want to say hello, feel free to reach out!
-          </p>
+          <p>Email me or connect on LinkedIn.</p>
 
           <div className="contact-details">
             {contactInfo.map((info, index) => (
@@ -134,6 +138,25 @@ const Contact = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          <div className="contact-social">
+            <a
+              href="https://github.com/leulged"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://linkedin.com/in/leulgedion"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
           </div>
 
           <motion.div

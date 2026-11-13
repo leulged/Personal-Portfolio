@@ -11,107 +11,106 @@ import "./Experience.css";
 const Experience = () => {
   const experiences = [
     {
-      title: "Software Engineer",
+      title: "Software Engineer (Contractor)",
       company: "Prospex AI Inc",
       location: "Remote",
       duration: "2025 - Present",
       description:
-        "Participated in multiple AI and software development projects, contributing to various innovative solutions.",
+        "Build full-stack features for ProspexCare, a healthcare platform with React Native mobile and web apps.",
       responsibilities: [
-        "Contributed to multiple AI-powered projects and applications",
-        "Participated in full-stack development across various projects",
-        "Collaborated with cross-functional teams on innovative solutions",
-        "Worked on scalable software solutions using modern technologies",
+        "Build full-stack features for ProspexCare, a healthcare platform with React Native mobile and web apps.",
+        "Integrate AI/ML models into backend services, including AI-assisted document extraction.",
+        // TODO: one concrete thing I personally built or improved, with a number if I have one
       ],
       techStack: [
-        "Python",
         "React",
         "Next.js",
         "React Native",
         "Node.js",
         "Supabase",
-        "AI",
-        "JavaScript",
+        "Python",
       ],
     },
     {
-      title: "Software Developer",
-      company: "IE Network Solution",
-      location: "In-Person",
-      duration: "2023 - 2024",
+      title: "AI Evaluator & Benchmark Task Author",
+      company: "AfterQuery / Harbor",
+      location: "Remote",
+      // TODO: confirm end date, currently shown as 2026
+      duration: "2026",
       description:
-        "Developed comprehensive web applications including vacancy and user management systems.",
+        "Author SWE-bench-style coding tasks and evaluate AI-generated responses.",
       responsibilities: [
-        "Developed vacancy management system with modern technologies",
-        "Built user management system with authentication and authorization",
-        "Implemented responsive web applications using modern frameworks",
-        "Collaborated with clients to deliver custom solutions",
+        "Authored SWE-bench-style coding tasks for AI agent evaluation (Silver task-author status at Harbor).",
+        "Worked on memory-safety bug and patch tasks in C codebases.",
+        "Evaluated AI-generated responses for accuracy, reasoning and instruction adherence.",
       ],
-      techStack: [
-        "React",
-        "Node.js",
-        "MongoDB",
-        "Express",
-        "JavaScript",
-        "HTML/CSS",
+      techStack: ["C", "Python", "Docker", "Linux"],
+    },
+    {
+      title: "AI Trainer & Evaluator",
+      company: "Revelo",
+      location: "Remote",
+      duration: "2025 - 2026",
+      description:
+        "Evaluated terminal-based AI agent solutions against real GitHub issues.",
+      responsibilities: [
+        "Evaluated terminal-based AI agent solutions against real GitHub issues for correctness and quality.",
+        "20+ accepted tasks; provided annotation and feedback used for model training.",
       ],
+      techStack: [],
     },
     {
       title: "Backend Developer Intern",
-      company: "Eskalate",
-      location: "In-Person",
-      duration: "2025 - Present",
+      company: "Eskalate (via A2SV)",
+      location: "",
+      // TODO: confirm end date. Do not show Present; this internship has ended.
+      duration: "2025",
+      description: "Built backend services and REST APIs in Go.",
+      responsibilities: ["Built backend services and REST APIs in Go."],
+      techStack: ["Go", "Gin", "MongoDB", "Docker", "Git"],
+    },
+    {
+      title: "Web Developer Intern",
+      company: "IE Network Solutions",
+      location: "Addis Ababa",
+      duration: "2024",
       description:
-        "Backend development using Go language and modern backend technologies.",
+        "Built vacancy and user management systems with authentication and authorization (MERN stack).",
       responsibilities: [
-        "Developed backend services using Go language",
-        "Implemented RESTful APIs and database solutions",
-        "Worked on server-side development and optimization",
-        "Collaborated with frontend teams for seamless integration",
+        "Built vacancy and user management systems with authentication and authorization (MERN stack).",
       ],
-      techStack: [
-        "Go",
-        "Gin Framework",
-        "MongoDB",
-        "AI",
-        "RESTful APIs",
-        "Git",
-        "Docker",
-      ],
+      techStack: ["React", "Node.js", "Express", "MongoDB"],
     },
     {
       title: "AI Career Essentials Mentor",
       company: "ALX AICE",
       location: "Remote",
-      duration: "2023",
+      // TODO: confirm year. Old site said 2023; the recommendation letter is dated 2024.
+      duration: "Year unconfirmed",
       description:
-        "Mentored students in AI Career Essentials program, providing guidance and support.",
+        "Mentored students in AI fundamentals and career development.",
       responsibilities: [
-        "Mentored students in AI fundamentals and career development",
-        "Provided technical guidance on AI concepts and applications",
-        "Conducted code reviews and project assessments",
-        "Supported students in their learning journey",
+        "Mentored students in AI fundamentals and career development.",
       ],
-      techStack: ["AI", "Teaching", "Mentoring", "Career Development"],
+      techStack: [],
     },
   ];
 
   const education = [
     {
-      degree: "Software Engineering",
+      degree: "BSc Software Engineering",
       institution: "Adama Science and Technology University",
       location: "Adama, Ethiopia",
-      duration: "2021 - Present",
+      duration: "2021 - 2026",
       description:
-        "5th Year Software Engineering student with focus on software development, algorithms, and data structures.",
+        "BSc in Software Engineering, completed in 2026. CGPA 3.5.",
     },
     {
-      degree: "Competitive Programming",
-      institution: "A2SV (Africa to Silicon Valley)",
-      location: "In-Person",
-      duration: "2024 - Present",
-      description:
-        "Intensive competitive programming program focusing on algorithms, data structures, and problem-solving skills.",
+      degree: "Problem solving and backend track",
+      institution: "Africa to Silicon Valley (A2SV)",
+      location: "",
+      duration: "2025 - 2026",
+      description: "Problem solving and backend track. Ended in 2026.",
     },
   ];
 
@@ -163,9 +162,11 @@ const Experience = () => {
                 <h5>{exp.company}</h5>
                 <div className="duration">
                   <FaCalendarAlt /> {exp.duration}
-                  <span style={{ marginLeft: "1rem" }}>
-                    <FaMapMarkerAlt /> {exp.location}
-                  </span>
+                  {exp.location ? (
+                    <span style={{ marginLeft: "1rem" }}>
+                      <FaMapMarkerAlt /> {exp.location}
+                    </span>
+                  ) : null}
                 </div>
                 <p>{exp.description}</p>
                 <div className="responsibilities">
@@ -176,16 +177,18 @@ const Experience = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="tech-stack">
-                  <h6>Technologies Used:</h6>
-                  <div className="tech-tags">
-                    {exp.techStack.map((tech, techIndex) => (
-                      <span key={techIndex} className="tech-tag">
-                        {tech}
-                      </span>
-                    ))}
+                {exp.techStack.length > 0 && (
+                  <div className="tech-stack">
+                    <h6>Technologies Used:</h6>
+                    <div className="tech-tags">
+                      {exp.techStack.map((tech, techIndex) => (
+                        <span key={techIndex} className="tech-tag">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
               </motion.div>
             ))}
           </div>
@@ -233,9 +236,11 @@ const Experience = () => {
               <h5>{edu.institution}</h5>
               <div className="duration">
                 <FaCalendarAlt /> {edu.duration}
-                <span style={{ marginLeft: "1rem" }}>
-                  <FaMapMarkerAlt /> {edu.location}
-                </span>
+                {edu.location ? (
+                  <span style={{ marginLeft: "1rem" }}>
+                    <FaMapMarkerAlt /> {edu.location}
+                  </span>
+                ) : null}
               </div>
               <p>{edu.description}</p>
             </motion.div>
@@ -251,15 +256,19 @@ const Experience = () => {
             <h4>Key Highlights</h4>
             <div className="highlight-items">
               <div className="highlight-item">
-                <span className="highlight-number">5th</span>
-                <span className="highlight-text">Year Student</span>
-              </div>
-              <div className="highlight-item">
                 <span className="highlight-number">3.5</span>
-                <span className="highlight-text">GPA</span>
+                <span className="highlight-text">CGPA</span>
               </div>
               <div className="highlight-item">
-                <span className="highlight-number">3+</span>
+                <span className="highlight-number">BSc 2026</span>
+                <span className="highlight-text">Software Engineering</span>
+              </div>
+              <div className="highlight-item">
+                <span className="highlight-number">600+</span>
+                <span className="highlight-text">Problems Solved</span>
+              </div>
+              <div className="highlight-item">
+                <span className="highlight-number">5</span>
                 <span className="highlight-text">Programming Languages</span>
               </div>
             </div>

@@ -1,9 +1,14 @@
 # Personal Portfolio - Leul Gedion
 
-This is the personal portfolio of **Leul Gedion**, a 5th-year Software Engineering student, Full Stack Developer, and Data Scientist. The portfolio showcases my skills, experience, certifications, competitive programming achievements, and projects.
+This is the personal portfolio of **Leul Gedion**, a software engineer focused on backend, full-stack, and AI evaluation work.
 
-## 🌐 Live Demo
-Check out the live portfolio here: [https://leulgedion.netlify.app/](https://leulgedion.netlify.app/)
+## Deployment
+
+Deploy on Vercel with the Create React App preset.
+
+- Build command: `npm run build`
+- Output directory: `build`
+- Set `RESEND_API_KEY` in the Vercel project environment. The contact form posts to `/api/contact`.
 
 ## Sections
 
@@ -13,7 +18,7 @@ Check out the live portfolio here: [https://leulgedion.netlify.app/](https://leu
 - Quick links to download CV and get in touch.
 
 ### About
-- Background: 5th-year Software Engineering student at Adama Science and Technology University.
+- Background: BSc Software Engineering, Adama Science and Technology University (2026).
 - Expertise in full-stack development, AI/ML integration, and data science.
 - Passionate about turning complex ideas into scalable applications.
 
@@ -26,12 +31,12 @@ Check out the live portfolio here: [https://leulgedion.netlify.app/](https://leu
 ### Experience
 - **Software Engineer, Prospex AI Inc (2025-Present)**  
   Contributed to AI-powered projects, full-stack development, and scalable software solutions.
-- **Software Developer, IE Network Solution (2023-2024)**  
-  Developed web applications including vacancy and user management systems.
+- **Web Developer Intern, IE Network Solutions (2024)**  
+  Built vacancy and user management systems with authentication and authorization.
 
 ### Education
-- **Software Engineering, Adama Science and Technology University (2021-Present)**
-- **Competitive Programming, A2SV (2024-Present)**
+- **BSc Software Engineering, Adama Science and Technology University (2021-2026)**
+- **Africa to Silicon Valley (A2SV), problem solving and backend track (2025-2026)**
 
 ### Certifications
 - ALX AI Career Essentials  
@@ -46,18 +51,17 @@ Check out the live portfolio here: [https://leulgedion.netlify.app/](https://leu
 
 ### Contact
 - **Email:** leulgedion224@gmail.com  
-- **Phone:** +251 912 345 678  
+- **Phone:** +251 97 956 4960  
 - **Location:** Adama, Ethiopia  
 
 ## Features
 - Modern **React-based portfolio** with interactive UI.
 - Showcases professional experience, skills, certifications, and projects.
 - Includes contact form for project inquiries and collaborations.
-- Fully deployed and accessible online.
+- Contact form sends messages through Resend on Vercel.
 
 ## Author
-**Leul Gedion** – Full Stack Developer | AI/ML Developer | Data Scientist  
-Passionate about creating innovative solutions and exploring new technologies.
+**Leul Gedion** – Software Engineer | AI Evaluation & Backend
 
 ## License
 This repository is for personal portfolio purposes and professional showcase.

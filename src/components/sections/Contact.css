@@ -27,6 +27,30 @@
   gap: 2rem;
 }
 
+.contact-social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contact-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: var(--bg-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  color: var(--main-color);
+  font-size: 2rem;
+  transition: 0.3s ease;
+}
+
+.contact-social a:hover {
+  background: var(--main-color);
+  color: var(--white-color);
+}
+
 .contact-item {
   display: flex;
   align-items: center;

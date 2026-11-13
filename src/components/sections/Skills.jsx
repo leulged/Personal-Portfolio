@@ -13,60 +13,45 @@ import "./Skills.css";
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend Development",
+      title: "Languages",
       icon: <FaCode />,
+      skills: ["Go", "TypeScript", "JavaScript", "Python", "C", "Rust"],
+    },
+    {
+      title: "Backend",
+      icon: <FaServer />,
       skills: [
-        { name: "JavaScript", level: 90 },
-        { name: "React.js", level: 85 },
-        { name: "Next.js", level: 80 },
-        { name: "React Native", level: 70 },
-        { name: "HTML5/CSS3", level: 85 },
-        { name: "TypeScript", level: 70 },
-        { name: "Tailwind CSS", level: 75 },
+        "Node.js",
+        "Express",
+        "Gin",
+        "REST APIs",
+        "JWT/Auth",
+        "Stripe integration",
       ],
     },
     {
-      title: "Backend Development",
-      icon: <FaServer />,
-      skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Go", level: 80 },
-        { name: "Python", level: 75 },
-        { name: "Express.js", level: 80 },
-        { name: "RESTful APIs", level: 85 },
-      ],
+      title: "Frontend & Mobile",
+      icon: <FaCode />,
+      skills: ["React", "Next.js", "React Native", "HTML/CSS", "Tailwind CSS"],
     },
     {
       title: "Databases",
       icon: <FaDatabase />,
-      skills: [
-        { name: "MongoDB", level: 80 },
-        { name: "PostgreSQL", level: 70 },
-        { name: "MySQL", level: 65 },
-        { name: "Mongoose", level: 75 },
-      ],
+      skills: ["PostgreSQL", "MySQL", "MongoDB", "Supabase"],
     },
     {
-      title: "AI/ML & Data Science",
+      title: "AI & Evaluation",
       icon: <FaBrain />,
       skills: [
-        { name: "Python", level: 75 },
-        { name: "Pandas", level: 70 },
-        { name: "Machine Learning", level: 70 },
-        { name: "Data Visualization", level: 65 },
-        { name: "Streamlit", level: 70 },
+        "LLM output evaluation",
+        "Benchmark & test authoring",
+        "AI model integration",
       ],
     },
     {
-      title: "Tools & Technologies",
+      title: "Tools",
       icon: <FaTools />,
-      skills: [
-        { name: "Git/GitHub", level: 85 },
-        { name: "Stripe Connect", level: 75 },
-        { name: "JWT Authentication", level: 80 },
-        { name: "Postman", level: 80 },
-        { name: "VS Code", level: 90 },
-      ],
+      skills: ["Git", "Docker", "CI/CD"],
     },
   ];
 
@@ -107,29 +92,10 @@ const Skills = () => {
               <h3>{category.title}</h3>
             </div>
             <div className="skills-list">
-              {category.skills.map((skill, skillIndex) => (
-                <motion.div
-                  key={skillIndex}
-                  className="skill-item"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: skillIndex * 0.05 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="skill-info">
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-level">{skill.level}%</span>
-                  </div>
-                  <div className="skill-bar">
-                    <motion.div
-                      className="skill-progress"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      transition={{ duration: 1, delay: 0.2 }}
-                      viewport={{ once: true }}
-                    ></motion.div>
-                  </div>
-                </motion.div>
+              {category.skills.map((skill) => (
+                <span key={skill} className="skill-item">
+                  {skill}
+                </span>
               ))}
             </div>
           </motion.div>
@@ -167,15 +133,8 @@ const Skills = () => {
           <div className="cp-stat">
             <FaChartLine />
             <div>
-              <h4>400+</h4>
-              <p>LeetCode Problems</p>
-            </div>
-          </div>
-          <div className="cp-stat">
-            <FaCode />
-            <div>
-              <h4>200+</h4>
-              <p>Codeforces Problems</p>
+              <h4>600+</h4>
+              <p>Problems solved on LeetCode and Codeforces</p>
             </div>
           </div>
         </div>

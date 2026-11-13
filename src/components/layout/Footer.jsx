@@ -31,7 +31,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <h3>Leul Gedion</h3>
-          <p>Software Engineer | AI/ML Developer | Data Scientist</p>
+          <p>Software Engineer | AI Evaluation & Backend</p>
         </div>
 
         <div className="footer-section">
@@ -47,7 +47,13 @@ const Footer = () => {
               <a href="#skills">Skills</a>
             </li>
             <li>
+              <a href="#experience">Experience</a>
+            </li>
+            <li>
               <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -55,6 +61,9 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Contact</h4>
           <p>leulgedion224@gmail.com</p>
+          <p>
+            <a href="tel:+251979564960">+251 97 956 4960</a>
+          </p>
           <p>Adama, Ethiopia</p>
         </div>
 
@@ -77,7 +86,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2024 Leul Gedion</p>
+        <p>© 2026 Leul Gedion</p>
       </div>
     </footer>
   );
